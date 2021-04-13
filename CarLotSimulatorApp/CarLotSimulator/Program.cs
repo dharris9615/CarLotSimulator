@@ -15,8 +15,42 @@ namespace CarLotSimulator
 
 
             //Now that the Car class is created we can instanciate 3 new cars
+
+            var truck = new Car();
+            truck.Make = "Ford";
+            truck.Model = "Kingranch";
+            truck.Year = 2030;
+            truck.EngineNoise = "vroom";
+            truck.HonkNoise = "beep beep";
+            truck.IsDriveable = true;
+
+            var hybrid = new Car()
+            {
+                Make = "Toyota",
+                Model = "Prius",
+                Year = 2017,
+                EngineNoise = "...",
+                HonkNoise = "tweet tweet",
+                IsDriveable = true
+
+            };
+
+            var suv = new Car(2010, "Chevy", "Tahoe", "vroom", "beep", true);
+
+
+
+
             //Set the properties for each of the cars
             //Call each of the methods for each car
+
+            truck.MakeEngineNoise(truck.EngineNoise);
+            truck.MakeHonkNoise(truck.HonkNoise);
+
+            hybrid.MakeEngineNoise(hybrid.EngineNoise);
+            hybrid.MakeHonkNoise(hybrid.HonkNoise);
+
+            suv.MakeEngineNoise(suv.EngineNoise);
+            suv.MakeHonkNoise(suv.HonkNoise);
 
             //*************BONUS*************//
 
@@ -24,6 +58,18 @@ namespace CarLotSimulator
 
             //*************BONUS X 2*************//
 
+
+            var onLot = new CarLot();
+
+            onLot.carList.Add(truck);
+            onLot.carList.Add(hybrid);
+            onLot.carList.Add(suv);
+
+            foreach (Car vehicle in onLot.carList)
+            {
+                Console.WriteLine($"{vehicle.Make}, {vehicle.Model}, was made in {vehicle.Year}" );
+            }
+           
             //Create a CarLot class
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
