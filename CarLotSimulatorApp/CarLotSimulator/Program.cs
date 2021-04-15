@@ -65,6 +65,8 @@ namespace CarLotSimulator
             onLot.carList.Add(hybrid);
             onLot.carList.Add(suv);
 
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars}");
+
             foreach (Car vehicle in onLot.carList)
             {
                 Console.WriteLine($"{vehicle.Make}, {vehicle.Model}, was made in {vehicle.Year}" );
