@@ -37,7 +37,7 @@ namespace CarLotSimulator
 
             var suv = new Car(2010, "Chevy", "Tahoe", "vroom", "beep", true);
 
-
+            var sport = new Car(201, "Chevy", "corvette", "vroom", "beep", true);
 
 
             //Set the properties for each of the cars
@@ -64,6 +64,7 @@ namespace CarLotSimulator
             onLot.CarList.Add(truck);
             onLot.CarList.Add(hybrid);
             onLot.CarList.Add(suv);
+            onLot.CarList.Add(sport);
 
             Console.WriteLine($"Number of cars created: {CarLot.numberOfCars}");
 
