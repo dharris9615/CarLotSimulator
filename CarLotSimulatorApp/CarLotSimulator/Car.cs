@@ -15,7 +15,7 @@ namespace CarLotSimulator
             Model = model;
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
-            IsDriveable = IsDriveable;
+            IsDriveable = isDriveable;
 
         }
 
